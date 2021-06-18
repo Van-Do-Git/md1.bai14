@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quann ly san pham</title>
+</head>
+<body>
+<button onclick="hienthisanpham();">Hien Thi Danh Sach</button>
+<br/><br/>
+<div id="bang"></div>
+<br>
+<input type="text" id ="add">
+<button onclick="Add()">Add</button>
+<script>
+    let danhsach =["Sony Xperia", "Samsung Galaxy", "Nokia 6",
+        "XiaoMi Redmi Note 4", "Apple Iphone 6s","XiaoMi Mi 5s Plus",
+        "Aple Iphone 8 Plus", "Fujitsu F-04E", "Oppo A71"]
+    function hienthisanpham(){
+        let bang = "<table border='1' width='300' " +
+            "cellspacing='0' cellpadding='3' style='text-align: center'>" +
+            "<tr><td>STT</td><td>Ten San Pham</td><td>Xoa Sua</td>";
+        for (let i = 0; i < danhsach.length; i++) {
+            bang+="<tr>" +
+                "<td>"+i+"</td>" +
+                "<td>"+danhsach[i]+"</td>"+
+                "<td>" +
+                "<input type='button' value='Delete' onclick='Xoasanpham("+i+");'> " +
+                "<input type='button' value='Edit' onclick='Suasanpham("+i+");'>" +
+                "</td>"
+        }
+        bang=bang+"</table>";
+        document.getElementById("bang").innerHTML=bang;
+    }
+    function Xoasanpham(index){
+        danhsach.splice(index,1);
+        hienthisanpham();
+    }
+    function Add(){
+        let themmoi=document.getElementById("add").value;
+        danhsach.push(themmoi);
+        hienthisanpham();
+    }
+    function Suasanpham(index){
+        let Edit=prompt("Ban can chinh sua gi :",danhsach[index]);
+        danhsach[index]=Edit;
+        hienthisanpham();
+    }
+</script>
+</body>
+</html>
