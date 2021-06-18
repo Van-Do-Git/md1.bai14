@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>truyen vao 2 tham so</title>
+</head>
+<body>
+<input type="number" id="a"> <p>nhap so a</p> <br>
+<input type="number" id="b"> <p>nhap so b</p>
+<button onclick="haithamso();">Kiemtra</button>
+<script>
+  function haithamso(a,b){
+    a= parseInt(document.getElementById("a").value);
+    b= parseInt(document.getElementById("b").value);
+    if (a>b){
+      return alert("so thu nhat lon hon so thu 2")
+    } else{
+      return alert("tong hai so la :" +a+b);
+    }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tang gia tri cho doi so</title>
+</head>
+<body>
+<input id = "socantang" type="nuber" oninput="tangso();"/>
+<p><span id = "sotang"></span></p>
+<script>
+  function tangso(){
+    let a = +document.getElementById("socantang").value +1;
+    document.getElementById("sotang").innerText = a;
+  }
+</script>
+</body>
+</html>

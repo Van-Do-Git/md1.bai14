@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>timtiengoisau</title>
+</head>
+<body>
+<input type="button" value="timkiem" onclick="timtenngoisao();">
+<script>
+    function timtenngoisao(){
+        let timkien = prompt("nhao vao ten ngoi sao ban can tim");
+        let ngoisao1=["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe" , "Regulus"];
+        let ngoisao2=["Ursa", "Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa", "Major", "Leo"];
+        let index= -1;
+        for(var i in ngoisao1){
+            if(timkien==ngoisao1[i]){
+                index = i;
+            }
+        } alert(ngoisao2[index])
+    }
+</script>
+</body>
+</html>
