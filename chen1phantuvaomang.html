@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chen 1 phan tu vao mang</title>
+</head>
+<body>
+<script>
+    arr=[1,3,4,5,56,7,6,545,34,]
+   function chen(index, newvalue){
+       for (let i = arr.length; i >index; i--) {
+           arr[i]=arr[i-1];
+       }
+       arr[index]=newvalue;
+       return arr;
+   }
+   console.log(chen(4,100));
+</script>
+</body>
+</html>
