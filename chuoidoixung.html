@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiem tra chuoi doi xung hay khong ham De Quy</title>
+</head>
+<body>
+<script>
+    let a =prompt("nhap vao tu de kiem tra").trim();
+    let b=[];
+    for (let i = 0; i < a.length; i++) {
+        b.push(a[i]);
+    }
+    function dequy(arr){
+        if (arr[0]==arr[arr.length-1]){
+            arr.pop();
+            arr.shift();
+            if (arr.length<=1){
+                console.log("true");
+                return true;
+            }
+            dequy(arr);
+        } else {
+            console.log("false");
+         return false;
+        }
+    }
+    dequy(b);
+
+</script>
+</body>
+</html>
